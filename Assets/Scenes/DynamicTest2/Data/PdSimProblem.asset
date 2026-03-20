@@ -1,0 +1,479 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82bf94bd81663e5ea88fffcb1554d4c, type: 3}
+  m_Name: PdSimProblem
+  m_EditorClassIdentifier: 
+  domainName: cerm_qurm_mixchemicals_domain
+  problemName: cerm_qurm_mixchemicals
+  features:
+  - NegativeConditions
+  - FlatTyping
+  - ActionBased
+  - HierarchicalTyping
+  typesDeclaration:
+    serializableTypeNodes:
+    - name: object
+      childrenCount: 2
+      indexFirstChild: 1
+    - name: thing
+      childrenCount: 5
+      indexFirstChild: 2
+    - name: robot
+      childrenCount: 0
+      indexFirstChild: 3
+    - name: grip
+      childrenCount: 2
+      indexFirstChild: 4
+    - name: arm
+      childrenCount: 0
+      indexFirstChild: 5
+    - name: arm2
+      childrenCount: 0
+      indexFirstChild: 6
+    - name: interactable
+      childrenCount: 2
+      indexFirstChild: 7
+    - name: mixedchemical
+      childrenCount: 0
+      indexFirstChild: 8
+    - name: chemical
+      childrenCount: 0
+      indexFirstChild: 9
+    - name: station
+      childrenCount: 0
+      indexFirstChild: 10
+    - name: mixstation
+      childrenCount: 0
+      indexFirstChild: 11
+    - name: location
+      childrenCount: 0
+      indexFirstChild: 12
+  fluents:
+  - name: at
+    type: 3
+    parameters:
+    - name: t
+      type: thing
+    - name: l
+      type: location
+  - name: moveto
+    type: 3
+    parameters:
+    - name: f
+      type: location
+    - name: t
+      type: location
+  - name: carry
+    type: 3
+    parameters:
+    - name: a
+      type: arm
+    - name: c
+      type: chemical
+  - name: carry2
+    type: 3
+    parameters:
+    - name: a
+      type: arm2
+    - name: c
+      type: chemical
+  - name: twohandcarry
+    type: 3
+    parameters:
+    - name: a
+      type: arm
+    - name: a2
+      type: arm2
+    - name: c
+      type: mixedchemical
+  - name: arm-empty
+    type: 3
+    parameters: []
+  - name: arm2-empty
+    type: 3
+    parameters: []
+  instantaneousActions:
+  - name: moverobot
+    parameters:
+    - name: r
+      type: robot
+    - name: f
+      type: location
+    - name: t
+      type: location
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: at
+        parameters:
+        - r
+        - f
+      actionParametersMap: 0000000001000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: at
+        parameters:
+        - r
+        - t
+      actionParametersMap: 0000000002000000
+      effectKind: 1
+  - name: pickup
+    parameters:
+    - name: r
+      type: robot
+    - name: a
+      type: arm
+    - name: c
+      type: chemical
+    - name: l
+      type: location
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: at
+        parameters:
+        - c
+        - l
+      actionParametersMap: 0200000003000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: arm-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: carry
+        parameters:
+        - a
+        - c
+      actionParametersMap: 0100000002000000
+      effectKind: 1
+  - name: pickup2
+    parameters:
+    - name: r
+      type: robot
+    - name: a
+      type: arm2
+    - name: c
+      type: chemical
+    - name: l
+      type: location
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: at
+        parameters:
+        - c
+        - l
+      actionParametersMap: 0200000003000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: arm2-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: carry2
+        parameters:
+        - a
+        - c
+      actionParametersMap: 0100000002000000
+      effectKind: 1
+  - name: drop
+    parameters:
+    - name: r
+      type: robot
+    - name: a
+      type: arm
+    - name: c
+      type: chemical
+    - name: l
+      type: location
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: carry
+        parameters:
+        - a
+        - c
+      actionParametersMap: 0100000002000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: arm-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: at
+        parameters:
+        - c
+        - l
+      actionParametersMap: 0200000003000000
+      effectKind: 1
+  - name: drop2
+    parameters:
+    - name: r
+      type: robot
+    - name: a
+      type: arm2
+    - name: c
+      type: chemical
+    - name: l
+      type: location
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: carry2
+        parameters:
+        - a
+        - c
+      actionParametersMap: 0100000002000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: arm2-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: at
+        parameters:
+        - c
+        - l
+      actionParametersMap: 0200000003000000
+      effectKind: 1
+  - name: mixchemical
+    parameters:
+    - name: r
+      type: robot
+    - name: a
+      type: arm
+    - name: a2
+      type: arm2
+    - name: c1
+      type: chemical
+    - name: c2
+      type: chemical
+    - name: c3
+      type: mixedchemical
+    - name: l
+      type: location
+    - name: s
+      type: mixstation
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: carry
+        parameters:
+        - a
+        - c1
+      actionParametersMap: 0100000003000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: carry2
+        parameters:
+        - a2
+        - c2
+      actionParametersMap: 0200000004000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: at
+        parameters:
+        - c1
+        - l
+      actionParametersMap: 0300000006000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: at
+        parameters:
+        - c2
+        - l
+      actionParametersMap: 0400000006000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: at
+        parameters:
+        - c3
+        - l
+      actionParametersMap: 0500000006000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: arm-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: arm2-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+  - name: pickupmixed
+    parameters:
+    - name: r
+      type: robot
+    - name: a
+      type: arm
+    - name: a2
+      type: arm2
+    - name: c
+      type: mixedchemical
+    - name: l
+      type: location
+    - name: s
+      type: mixstation
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: twohandcarry
+        parameters:
+        - a
+        - a2
+        - c
+      actionParametersMap: 010000000200000003000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: at
+        parameters:
+        - c
+        - l
+      actionParametersMap: 0300000004000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: arm-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: arm2-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+  - name: dropmixed
+    parameters:
+    - name: r
+      type: robot
+    - name: a
+      type: arm
+    - name: a2
+      type: arm2
+    - name: c
+      type: mixedchemical
+    - name: l
+      type: location
+    - name: s
+      type: station
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: twohandcarry
+        parameters:
+        - a
+        - a2
+        - c
+      actionParametersMap: 010000000200000003000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: arm-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: arm2-empty
+        parameters: []
+      actionParametersMap: 
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: at
+        parameters:
+        - c
+        - l
+      actionParametersMap: 0300000004000000
+      effectKind: 1
+  durativeActions: []

@@ -1,0 +1,26 @@
+from pdsim_backend import run_backend
+run_backend(domain='/mnt/c/Users/Ross/The Robotics Accessibility Greybox/Assets/Robot Planning/dynamicTest.pddl', problem='/mnt/c/Users/Ross/The Robotics Accessibility Greybox/Assets/Robot Planning/DynamicTest2.pddl', planner='ENHSP')
+
+
+
+7.144
+7.027
+8.526
+6.979
+9.585
+6.989
+8.862
+9.563
+8.138
+8.299
+
+3
+4
+2
+6
+5
+4
+6
+2
+5
+4
