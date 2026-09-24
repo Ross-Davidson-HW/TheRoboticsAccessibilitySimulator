@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 79d8df081f25d2046b0ad6fbb37bafe6
+timeCreated: 1485275819
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 81594
+  packageName: Shipwreck and Rusty Ship With Interior
+  packageVersion: 1.0
+  assetPath: Assets/Ships and Shipwrecks/Prefabs/SteamShipSmall.prefab
+  uploadId: 158754

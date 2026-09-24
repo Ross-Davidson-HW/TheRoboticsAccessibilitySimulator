@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 202e8990706244241a917d674bc33063
+timeCreated: 1463766241
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 81594
+  packageName: Shipwreck and Rusty Ship With Interior
+  packageVersion: 1.0
+  assetPath: Assets/Ships and Shipwrecks/Prefabs/Helm.prefab
+  uploadId: 158754

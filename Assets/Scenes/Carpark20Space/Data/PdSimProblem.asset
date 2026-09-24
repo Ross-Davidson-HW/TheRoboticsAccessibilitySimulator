@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e82bf94bd81663e5ea88fffcb1554d4c, type: 3}
+  m_Name: PdSimProblem
+  m_EditorClassIdentifier: 
+  domainName: cerm_qurm_carpark-20-spaces-split_domain
+  problemName: cerm_qurm_carpark-20-spaces-split
+  features:
+  - HierarchicalTyping
+  - FlatTyping
+  - IncreaseEffects
+  - DisjunctiveConditions
+  - NegativeConditions
+  - 61
+  - Equalities
+  - ActionBased
+  - SimpleNumericPlanning
+  typesDeclaration:
+    serializableTypeNodes:
+    - name: object
+      childrenCount: 2
+      indexFirstChild: 1
+    - name: location
+      childrenCount: 3
+      indexFirstChild: 2
+    - name: parking-space
+      childrenCount: 0
+      indexFirstChild: 3
+    - name: entrance
+      childrenCount: 0
+      indexFirstChild: 4
+    - name: lane
+      childrenCount: 0
+      indexFirstChild: 5
+    - name: agent
+      childrenCount: 0
+      indexFirstChild: 6
+  fluents:
+  - name: at-location
+    type: 3
+    parameters:
+    - name: a
+      type: agent
+    - name: loc
+      type: location
+  - name: connected
+    type: 3
+    parameters:
+    - name: loc1
+      type: location
+    - name: loc2
+      type: location
+  - name: is-perpendicular
+    type: 3
+    parameters:
+    - name: p
+      type: parking-space
+  - name: has-marking
+    type: 3
+    parameters:
+    - name: p
+      type: parking-space
+  - name: scanned
+    type: 3
+    parameters:
+    - name: p
+      type: parking-space
+  - name: checked
+    type: 3
+    parameters:
+    - name: p
+      type: parking-space
+  - name: is-accessible-compliant
+    type: 3
+    parameters:
+    - name: p
+      type: parking-space
+  - name: space-width
+    type: 2
+    parameters:
+    - name: p
+      type: parking-space
+  - name: space-length
+    type: 2
+    parameters:
+    - name: p
+      type: parking-space
+  - name: access-zone-width
+    type: 2
+    parameters:
+    - name: p
+      type: parking-space
+  - name: distance-to-entrance
+    type: 2
+    parameters:
+    - name: p
+      type: parking-space
+  - name: surface-gradient
+    type: 2
+    parameters:
+    - name: p
+      type: parking-space
+  - name: compliant-spaces-found
+    type: 2
+    parameters: []
+  - name: scanned-spaces
+    type: 2
+    parameters: []
+  instantaneousActions:
+  - name: move
+    parameters:
+    - name: a
+      type: agent
+    - name: from
+      type: location
+    - name: to
+      type: location
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: False
+        fluentName: at-location
+        parameters:
+        - a
+        - from
+      actionParametersMap: 0000000001000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: at-location
+        parameters:
+        - a
+        - to
+      actionParametersMap: 0000000002000000
+      effectKind: 1
+  - name: scan-space
+    parameters:
+    - name: a
+      type: agent
+    - name: p
+      type: parking-space
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: scanned
+        parameters:
+        - p
+      actionParametersMap: 01000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 2
+          valueSymbol: 1
+        fluentName: scanned-spaces
+        parameters: []
+      actionParametersMap: 
+      effectKind: 2
+  - name: check-perpendicular-compliance
+    parameters:
+    - name: a
+      type: agent
+    - name: p
+      type: parking-space
+    - name: e
+      type: entrance
+    effects:
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: is-accessible-compliant
+        parameters:
+        - p
+      actionParametersMap: 01000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 4
+          valueSymbol: True
+        fluentName: checked
+        parameters:
+        - p
+      actionParametersMap: 01000000
+      effectKind: 1
+    - fluentAssignment:
+        value:
+          contentCase: 2
+          valueSymbol: 1
+        fluentName: compliant-spaces-found
+        parameters: []
+      actionParametersMap: 
+      effectKind: 2
+  durativeActions: []

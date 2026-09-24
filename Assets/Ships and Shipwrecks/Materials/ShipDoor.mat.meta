@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d373b307ddca3d74ba4400240bd11e5d
+timeCreated: 1474988240
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 81594
+  packageName: Shipwreck and Rusty Ship With Interior
+  packageVersion: 1.0
+  assetPath: Assets/Ships and Shipwrecks/Materials/ShipDoor.mat
+  uploadId: 158754

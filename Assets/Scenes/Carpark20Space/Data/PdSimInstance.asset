@@ -1,0 +1,1269 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26bf7a6cc511a7944ae3d20c7320e177, type: 3}
+  m_Name: PdSimInstance
+  m_EditorClassIdentifier: 
+  objects:
+  - name: inspector
+    type: agent
+  - name: main-entrance
+    type: entrance
+  - name: central-lane
+    type: lane
+  - name: space-1
+    type: parking-space
+  - name: space-2
+    type: parking-space
+  - name: space-3
+    type: parking-space
+  - name: space-4
+    type: parking-space
+  - name: space-5
+    type: parking-space
+  - name: space-6
+    type: parking-space
+  - name: space-7
+    type: parking-space
+  - name: space-8
+    type: parking-space
+  - name: space-9
+    type: parking-space
+  - name: space-10
+    type: parking-space
+  - name: space-11
+    type: parking-space
+  - name: space-12
+    type: parking-space
+  - name: space-13
+    type: parking-space
+  - name: space-14
+    type: parking-space
+  - name: space-15
+    type: parking-space
+  - name: space-16
+    type: parking-space
+  - name: space-17
+    type: parking-space
+  - name: space-18
+    type: parking-space
+  - name: space-19
+    type: parking-space
+  - name: space-20
+    type: parking-space
+  init:
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: at-location
+    parameters:
+    - inspector
+    - main-entrance
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: scanned-spaces
+    parameters: []
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: compliant-spaces-found
+    parameters: []
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - main-entrance
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - main-entrance
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-1
+    - space-2
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-2
+    - space-1
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-2
+    - space-3
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-3
+    - space-2
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-3
+    - space-4
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-4
+    - space-3
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-4
+    - space-5
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-5
+    - space-4
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-5
+    - space-6
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-6
+    - space-5
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-6
+    - space-7
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-7
+    - space-6
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-7
+    - space-8
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-8
+    - space-7
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-8
+    - space-9
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-9
+    - space-8
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-9
+    - space-10
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-10
+    - space-9
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-11
+    - space-12
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-12
+    - space-11
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-12
+    - space-13
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-13
+    - space-12
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-13
+    - space-14
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-14
+    - space-13
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-14
+    - space-15
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-15
+    - space-14
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-15
+    - space-16
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-16
+    - space-15
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-16
+    - space-17
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-17
+    - space-16
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-17
+    - space-18
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-18
+    - space-17
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-18
+    - space-19
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-19
+    - space-18
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-19
+    - space-20
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-20
+    - space-19
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-1
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-1
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-2
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-2
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-3
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-3
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-4
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-4
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-5
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-5
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-6
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-6
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-7
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-7
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-8
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-8
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-9
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-9
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-10
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-10
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-11
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-11
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-12
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-12
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-13
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-13
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-14
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-14
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-15
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-15
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-16
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-16
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-17
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-17
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-18
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-18
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-19
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-19
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - space-20
+    - central-lane
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: connected
+    parameters:
+    - central-lane
+    - space-20
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: is-perpendicular
+    parameters:
+    - space-7
+  - value:
+      contentCase: 4
+      valueSymbol: True
+    fluentName: has-marking
+    parameters:
+    - space-7
+  - value:
+      contentCase: 3
+      valueSymbol: 2
+    fluentName: space-width
+    parameters:
+    - space-7
+  - value:
+      contentCase: 3
+      valueSymbol: 4
+    fluentName: space-length
+    parameters:
+    - space-7
+  - value:
+      contentCase: 3
+      valueSymbol: 1
+    fluentName: access-zone-width
+    parameters:
+    - space-7
+  - value:
+      contentCase: 2
+      valueSymbol: 15
+    fluentName: distance-to-entrance
+    parameters:
+    - space-7
+  - value:
+      contentCase: 3
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-7
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-1
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-1
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-1
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-1
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-1
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-2
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-2
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-2
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-2
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-2
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-3
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-3
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-3
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-3
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-3
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-4
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-4
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-4
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-4
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-4
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-5
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-5
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-5
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-5
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-5
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-6
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-6
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-6
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-6
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-6
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-8
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-8
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-8
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-8
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-8
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-9
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-9
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-9
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-9
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-9
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-10
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-10
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-10
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-10
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-10
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-11
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-11
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-11
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-11
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-11
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-12
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-12
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-12
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-12
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-12
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-13
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-13
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-13
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-13
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-13
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-14
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-14
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-14
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-14
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-14
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-15
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-15
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-15
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-15
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-15
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-16
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-16
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-16
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-16
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-16
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-17
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-17
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-17
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-17
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-17
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-18
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-18
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-18
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-18
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-18
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-19
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-19
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-19
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-19
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-19
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-width
+    parameters:
+    - space-20
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: space-length
+    parameters:
+    - space-20
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: access-zone-width
+    parameters:
+    - space-20
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: distance-to-entrance
+    parameters:
+    - space-20
+  - value:
+      contentCase: 2
+      valueSymbol: 0
+    fluentName: surface-gradient
+    parameters:
+    - space-20
+  plan:
+  - id: 
+    name: move
+    parameters:
+    - inspector
+    - main-entrance
+    - central-lane
+    startTime: -1
+    endTime: -1
+  - id: 
+    name: move
+    parameters:
+    - inspector
+    - central-lane
+    - space-7
+    startTime: -1
+    endTime: -1
+  - id: 
+    name: scan-space
+    parameters:
+    - inspector
+    - space-7
+    startTime: -1
+    endTime: -1
+  - id: 
+    name: check-perpendicular-compliance
+    parameters:
+    - inspector
+    - space-7
+    - main-entrance
+    startTime: -1
+    endTime: -1

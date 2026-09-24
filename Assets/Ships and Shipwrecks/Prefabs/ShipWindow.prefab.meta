@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: a533cc87ef2ac5841ac9a165b2fa04cc
+timeCreated: 1474988462
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 81594
+  packageName: Shipwreck and Rusty Ship With Interior
+  packageVersion: 1.0
+  assetPath: Assets/Ships and Shipwrecks/Prefabs/ShipWindow.prefab
+  uploadId: 158754

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 447dda039a20c4d44b4c4a8e07d3df00
+timeCreated: 1485180645
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 81594
+  packageName: Shipwreck and Rusty Ship With Interior
+  packageVersion: 1.0
+  assetPath: Assets/Ships and Shipwrecks/Prefabs/controlroom.prefab
+  uploadId: 158754

@@ -3258,7 +3258,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3426797034643727577, guid: 97a372da527f821469edbbd61fc130dd, type: 3}
       propertyPath: m_Carve
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4953633604609881264, guid: 97a372da527f821469edbbd61fc130dd, type: 3}
       propertyPath: m_LocalScale.z

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 0c1ac9f51b13ed649b87de431ed99f66
+timeCreated: 1464986522
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 81594
+  packageName: Shipwreck and Rusty Ship With Interior
+  packageVersion: 1.0
+  assetPath: Assets/Ships and Shipwrecks/Prefabs/TrapDoor.prefab
+  uploadId: 158754

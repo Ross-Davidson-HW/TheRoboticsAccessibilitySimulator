@@ -17,6 +17,7 @@ public class activateObstacle : MonoBehaviour
         {
             Debug.Log("Entered");
             obs.carving = true;
+            
         }
     }
 

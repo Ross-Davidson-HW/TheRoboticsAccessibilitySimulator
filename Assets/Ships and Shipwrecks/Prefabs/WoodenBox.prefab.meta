@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 89a4ce5abe6e0774899edeeb3bff6596
+timeCreated: 1485090720
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 81594
+  packageName: Shipwreck and Rusty Ship With Interior
+  packageVersion: 1.0
+  assetPath: Assets/Ships and Shipwrecks/Prefabs/WoodenBox.prefab
+  uploadId: 158754
