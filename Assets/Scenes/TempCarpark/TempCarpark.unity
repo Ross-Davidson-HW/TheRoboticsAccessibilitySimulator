@@ -2972,6 +2972,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8750587257448033887}
+  - {fileID: 7293751419826530464}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1851035210
@@ -3115,7 +3116,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 788177fa88a15c746a25b404b7ac6c93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationData: []
+  animationData:
+  - name: is-accessible-compliant_parking-space
+    parameters:
+    - parking-space
+    machine: {fileID: 4405748241125478467}
   metaData:
     name: is-accessible-compliant
     type: 3
@@ -3849,6 +3854,39 @@ MonoBehaviour:
   _data:
     _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
     _objectReferences: []
+--- !u!1 &712019331620730115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7293751419826530464}
+  - component: {fileID: 1501661502676008027}
+  - component: {fileID: 4405748241125478467}
+  m_Layer: 0
+  m_Name: is-accessible-compliant_parking-space
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1501661502676008027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712019331620730115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
 --- !u!1 &1560868036025250812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3892,6 +3930,44 @@ MonoBehaviour:
       agent","destinationUnit":{"$ref":"13"},"destinationKey":"?a agent","guid":"01d8cf5f-5ddc-41f2-bb04-9e064f6266f1","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"?loc
       location","destinationUnit":{"$ref":"13"},"destinationKey":"?loc location","guid":"19fe2cc6-f54b-4fef-9527-09e7fd41cfed","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"Boolean","destinationUnit":{"$ref":"13"},"destinationKey":"Boolean","guid":"adf0a0d5-2c38-4f7a-934a-8f8fe7f45eb5","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
     _objectReferences: []
+--- !u!114 &4405748241125478467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712019331620730115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2fe5546f775c47d2820aa5e8a715f53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _data:
+    _json: '{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[],"controlOutputDefinitions":[],"valueInputDefinitions":[],"valueOutputDefinitions":[],"title":"Animation
+      Script for predicate: is-accessible-compliant","summary":"?p - parking-space\n","pan":{"x":0.0,"y":120.0},"zoom":1.0,"elements":[{"EffectName":"is-accessible-compliant_parking-space","ArgumentCount":1,"EffectArguments":["?p
+      parking-space"],"EffectValueType":"Boolean","coroutine":true,"defaultValues":{},"position":{"x":-300.0,"y":-180.0},"guid":"181d9525-20f5-4846-8c20-21175e113472","$version":"A","$type":"PDSim.VisualScripting.Events.EffectEvent","$id":"10"},{"nest":{"source":"Embed","macro":null,"embed":{"variables":{"Kind":"Flow","collection":{"$content":[],"$version":"A"},"$version":"A"},"controlInputDefinitions":[{"key":"Entry","label":null,"summary":null,"hideLabel":true}],"controlOutputDefinitions":[{"key":"Exit","label":null,"summary":null,"hideLabel":true}],"valueInputDefinitions":[{"hasDefaultValue":false,"defaultValue":null,"_type":"UnityEngine.GameObject","key":"?p
+      parking-space","label":null,"summary":null,"hideLabel":false},{"hasDefaultValue":false,"defaultValue":{"$content":false,"$type":"System.Boolean"},"_type":"System.Boolean","key":"Boolean","label":null,"summary":null,"hideLabel":false}],"valueOutputDefinitions":[],"title":"Animation
+      Definition","summary":"Click to edit animation definition","pan":{"x":326.2064,"y":43.0},"zoom":1.0,"elements":[{"defaultValues":{},"position":{"x":-129.0,"y":-82.0},"guid":"d670a360-a8b6-45fa-b569-91f1ebec7f7d","$version":"A","$type":"Unity.VisualScripting.GraphInput","$id":"27"},{"defaultValues":{},"position":{"x":592.0,"y":26.0},"guid":"70de7a30-95e6-46da-97c7-31388102d4a5","$version":"A","$type":"Unity.VisualScripting.GraphOutput","$id":"29"},{"defaultValues":{},"position":{"x":40.0,"y":48.0},"guid":"00845cf1-5714-4706-906a-051ba9d1e89b","$version":"A","$type":"Unity.VisualScripting.If","$id":"31"},{"chainable":false,"parameterNames":["index"],"member":{"name":"GetChild","parameterTypes":["System.Int32"],"targetType":"UnityEngine.Transform","targetTypeName":"UnityEngine.Transform","$version":"A"},"defaultValues":{"target":null,"%index":{"$content":0,"$type":"System.Int32"}},"position":{"x":98.0,"y":-269.0},"guid":"fb44d11f-01dd-41d9-8598-37d5c9c94284","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"33"},{"chainable":false,"member":{"name":"material","parameterTypes":null,"targetType":"UnityEngine.MeshRenderer","targetTypeName":"UnityEngine.MeshRenderer","$version":"A"},"defaultValues":{"target":null,"input":null},"position":{"x":420.0,"y":-234.0},"guid":"c5473c28-74a2-49eb-a2a2-1e89fe5198c5","$version":"A","$type":"Unity.VisualScripting.SetMember","$id":"37"},{"type":"UnityEngine.Material","value":{"$content":0,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":295.0,"y":-2.0},"guid":"93453ccd-2d2d-4eac-8d67-0e2d7e4b82d4","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"40"},{"chainable":false,"parameterNames":["index"],"member":{"name":"GetChild","parameterTypes":["System.Int32"],"targetType":"UnityEngine.Transform","targetTypeName":"UnityEngine.Transform","$version":"A"},"defaultValues":{"target":null,"%index":{"$content":0,"$type":"System.Int32"}},"position":{"x":182.0,"y":157.0},"guid":"64671420-aef7-479b-b208-516825614fa5","$version":"A","$type":"Unity.VisualScripting.InvokeMember","$id":"42"},{"chainable":false,"member":{"name":"material","parameterTypes":null,"targetType":"UnityEngine.MeshRenderer","targetTypeName":"UnityEngine.MeshRenderer","$version":"A"},"defaultValues":{"target":null,"input":null},"position":{"x":504.0,"y":192.0},"guid":"d27a4c93-9331-4be6-afa8-ca1f9db3925c","$version":"A","$type":"Unity.VisualScripting.SetMember","$id":"46"},{"type":"UnityEngine.Material","value":{"$content":1,"$type":"UnityEngine.Object"},"defaultValues":{},"position":{"x":303.0,"y":413.0},"guid":"8e60c1c7-9d08-4635-8164-c3f59b9a5be3","$version":"A","$type":"Unity.VisualScripting.Literal","$id":"49"},{"sourceUnit":{"$ref":"27"},"sourceKey":"Entry","destinationUnit":{"$ref":"31"},"destinationKey":"enter","guid":"58f9ecc4-a565-47aa-a351-b5544a6da955","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"37"},"sourceKey":"assigned","destinationUnit":{"$ref":"29"},"destinationKey":"Exit","guid":"7034411d-b24b-4a6a-b0e0-f157b2426c5e","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"31"},"sourceKey":"ifTrue","destinationUnit":{"$ref":"33"},"destinationKey":"enter","guid":"2c1c3c41-cec9-4fa9-84fd-bff1e9ba124b","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"33"},"sourceKey":"exit","destinationUnit":{"$ref":"37"},"destinationKey":"assign","guid":"aa783e03-91fa-47ed-b491-d46907b964ab","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"42"},"sourceKey":"exit","destinationUnit":{"$ref":"46"},"destinationKey":"assign","guid":"5f53b4fe-8d1a-4732-9c5f-5fc7716fbe0d","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"31"},"sourceKey":"ifFalse","destinationUnit":{"$ref":"42"},"destinationKey":"enter","guid":"e98b6124-f823-4a1e-a06f-1f5fd939d305","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"46"},"sourceKey":"assigned","destinationUnit":{"$ref":"29"},"destinationKey":"Exit","guid":"cc73f3e3-38a2-4291-bfeb-878406343c51","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"27"},"sourceKey":"?p
+      parking-space","destinationUnit":{"$ref":"33"},"destinationKey":"target","guid":"8c5cc75e-f3bf-4ad7-86c8-2ffab5b0ca46","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"27"},"sourceKey":"Boolean","destinationUnit":{"$ref":"31"},"destinationKey":"condition","guid":"91ed3f58-e126-4752-8fb6-644c34e008a4","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"40"},"sourceKey":"output","destinationUnit":{"$ref":"37"},"destinationKey":"input","guid":"2eda7ac0-d8fb-4ce0-9fc8-5fc41906220d","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"33"},"sourceKey":"result","destinationUnit":{"$ref":"37"},"destinationKey":"target","guid":"4afb5b24-21f2-452a-870e-90eaae19db8d","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"42"},"sourceKey":"result","destinationUnit":{"$ref":"46"},"destinationKey":"target","guid":"270e0efd-ec38-422a-82c8-3cb71c358b7e","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"49"},"sourceKey":"output","destinationUnit":{"$ref":"46"},"destinationKey":"input","guid":"03a65273-2a09-458b-b545-05a2d2d7a472","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}},"defaultValues":{},"position":{"x":0.0,"y":0.0},"guid":"782e673f-71b8-4e60-acbc-25b73ee586de","$version":"A","$type":"Unity.VisualScripting.SubgraphUnit","$id":"13"},{"EffectName":"is-accessible-compliant_parking-space","defaultValues":{},"position":{"x":200.0,"y":-144.0},"guid":"574bea9e-813f-4744-abd0-6622a35dddb7","$version":"A","$type":"PDSim.VisualScripting.Events.EffectEndEvent","$id":"65"},{"sourceUnit":{"$ref":"10"},"sourceKey":"trigger","destinationUnit":{"$ref":"13"},"destinationKey":"Entry","guid":"24efa10a-f9aa-499c-864c-5c798c45142f","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"13"},"sourceKey":"Exit","destinationUnit":{"$ref":"65"},"destinationKey":"inputTrigger","guid":"c77baa48-4524-4545-82a5-23b313232e52","$type":"Unity.VisualScripting.ControlConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"?p
+      parking-space","destinationUnit":{"$ref":"13"},"destinationKey":"?p parking-space","guid":"8836a3b6-996a-4a35-aabd-0c5a36acb0dd","$type":"Unity.VisualScripting.ValueConnection"},{"sourceUnit":{"$ref":"10"},"sourceKey":"Boolean","destinationUnit":{"$ref":"13"},"destinationKey":"Boolean","guid":"450c9b7a-195d-4ac4-8f06-84d85c99cdc3","$type":"Unity.VisualScripting.ValueConnection"}],"$version":"A"}}}'
+    _objectReferences:
+    - {fileID: 2100000, guid: 4d7e04fe2b7bc994c80e964cf2453b8f, type: 2}
+    - {fileID: 2100000, guid: 586569570916bfc45944c4900e4bd529, type: 2}
+--- !u!4 &7293751419826530464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712019331620730115}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1851035209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &8750587257448033887
 Transform:
   m_ObjectHideFlags: 0
